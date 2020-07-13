@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targil 1</title>
+    <style>
+        html {
+            background:
+                url(https://images5.alphacoders.com/316/316870.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu a {
+            background: #3d3d3d;
+            color: #fff;
+            padding: 15px;
+            display: block;
+            border-bottom: 1px solid rgb(77, 212, 251);
+            transition: 0.5s all;
+            width: 80px;
+            border-radius: 9px;
+            font-size: large;
+            text-decoration: none;
+
+        }
+
+        .sidebar {
+            width: 200px;
+            margin: 40px;
+        }
+
+        .menu a:hover {
+            background: rgb(77, 212, 251);
+            padding: 10px 0 10px 20px;
+        }
+
+
+        .p_menu {
+            position: relative;
+        }
+
+        .p_menu {
+            position: relative;
+        }
+
+        .v_menu {
+            position: absolute;
+            width: 100%;
+            left: 100%;
+            top: -9999px;
+            opacity: 0;
+            border-left: 30px solid transparent;
+            transition: 0.5s opacity;
+        }
+
+        .p_menu:hover .v_menu {
+            opacity: 1;
+            top: 0;
+        }
+
+        .p_menu::after {
+            content: "";
+            position: absolute;
+            border: 5px solid;
+            border-color: transparent transparent transparent #eee;
+            top: 1em;
+            right: 3em;
+            transition: 0.5s;
+        }
+
+        .p_menu:hover::after {
+            transform: scaleX(-1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul class="menu">
+            <li class="p_menu"><a href="#">Question 1</a>
+                <ul class="v_menu">
+                    <li><a href="#">Answer 1</a></li>
+                </ul>
+            </li>
+
+            <li class="p_menu"><a href="#">Question 2</a>
+                <ul class="v_menu">
+                    <li><a href="#">Answer 2</a></li>
+                </ul>
+            </li>
+
+            <li class="p_menu"><a href="#">Question 3</a>
+                <ul class="v_menu">
+                    <li><a href="#">Answer 3</a></li>
+                </ul>
+            </li>
+
+            <li class="p_menu"><a href="#">Question 4</a>
+                <ul class="v_menu">
+                    <li><a href="#">Answer 4</a></li>
+                </ul>
+            </li>
+            <li class="p_menu"><a href="#">Question 5</a>
+                <ul class="v_menu">
+                    <li><a href="#">Answer 5</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
